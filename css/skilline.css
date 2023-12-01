@@ -1,4 +1,8 @@
-/*primary color*/
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* primary color */
 .bg-cream {
     background-color: #FEF8FB;
 }
