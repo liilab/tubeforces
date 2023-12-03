@@ -43,3 +43,8 @@ body {
 .text-darken {
     color: #2F327D;
 }
+
+.bg-card-orange{
+    border-radius: 8px;
+    background: linear-gradient(30deg, rgba(251, 138, 87, 0.10) 0%, rgba(245, 245, 245, 0.22) 75.21%, #F5F5F5 100%);
+}
