@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+
 /* primary color */
 .bg-cream {
     background-color: #FEF8FB;
@@ -9,7 +10,7 @@
 
 /*font*/
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Jakarta', sans-serif;
 }
 
 .bg-yellow-500 {
