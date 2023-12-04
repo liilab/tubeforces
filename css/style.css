@@ -49,3 +49,13 @@ body {
     border-radius: 8px;
     background: linear-gradient(30deg, rgba(251, 138, 87, 0.10) 0%, rgba(245, 245, 245, 0.22) 75.21%, #F5F5F5 100%);
 }
+
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+
+.img-fluid-7 {
+    max-width: 70%;
+    height: auto;
+}
