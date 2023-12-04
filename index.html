@@ -23,10 +23,10 @@
 
 </head>
 
-<body class="antialiased overflow-x-hidden">
+<body class="antialiased">
 
     <!-- navbar -->
-    <section id="navbar" class="mb-60 md:mb-0">
+    <section id="navbar" class="mb-60">
         <div x-data="{ open: false }" class="w-full text-gray-700 bg-cream">
             <div class="flex flex-col container px-8 mx-auto md:items-center md:justify-between md:flex-row">
                 <div class="flex flex-row items-center justify-between py-6">
@@ -160,7 +160,7 @@
         </div>
     </section>
 
-    <div class="w-full text-gray-700 items-center flex flex-col gap-10 mt-28">
+    <div class="w-full text-gray-700 items-center flex flex-col gap-10">
         <!--How it works section-->
         <div class="relative p-5 py-10 mb-10">
             <h1 data-aos="fade-right" data-aos-once="true"
@@ -169,7 +169,7 @@
             </h1>
             <img src="img/how-it-works.png" alt="how-it-works">
             <img src="img/red-ellips-1.png" alt="red-ellips-1"
-                class="absolute opacity-70 lg:opacity-100 z-0 bottom-32 right-0 lg:-right-56 lg:-top-60">
+                class="absolute opacity-70 lg:opacity-100 z-0 bottom-32 right-0 lg:-top-60">
 
         </div>
 
@@ -571,13 +571,13 @@
 
         <!-- Customer Review Section Start-->
         <section id="customers-review">
-            <div id="animation-carousel" class="relative w-full my-16 mt-10 md:mb-32 px-6 text-center overflow-hidden"
+            <div id="animation-carousel" class="relative w-full my-16 mt-10 md:mb-32 px-6 text-center"
                 data-carousel="static">
                 <h1 data-aos="fade-right" data-aos-once="true"
                     class="text-3xl lg:text-5xl font-bold leading-tight text-slate text-center">
                     What customers say about TubeForces?
                 </h1>
-                <div class="relative overflow-hidden rounded-lg h-[700px] container mx-auto">
+                <div class="relative rounded-lg h-[700px] container mx-auto overflow-hidden">
                     <div class="hidden duration-700 ease-in-out" data-carousel-item="active">
                         <div class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
 
@@ -767,6 +767,11 @@
                         </span>
                     </button>
                 </div>
+                <img src="img/green-ellips-1.png"
+                        class="absolute opacity-70 md:opacity-100 -bottom-60 -left-20 md:bottom-0 md:-right-32 z-0"
+                        alt="red-ellips-1">
+                    <img src="img/red-ellips-1.png"
+                        class="absolute opacity-70 md:opacity-100 -top-20 md:-top-20 left-0 md:left-96 z-0" alt="red-ellips-1">
             </div>
         </section>
         <!-- Customer Review Section End-->
