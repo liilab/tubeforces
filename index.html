@@ -23,7 +23,7 @@
 
 </head>
 
-<body class="antialiased">
+<body class="antialiased overflow-x-hidden">
 
     <!-- navbar -->
     <section id="navbar">
@@ -75,13 +75,13 @@
             </div>
         </div>
         <div class="bg-cream relative lg:pb-32 mx-auto">
-            <div class="max-w-screen-xl p-8 md:py-20 mx-auto flex flex-col lg:flex-row items-start md:gap-32">
+            <div class="container p-8 md:py-20 mx-auto flex flex-col lg:flex-row items-start md:gap-32">
                 <!--Left Col-->
                 <div
-                    class="flex flex-col w-full lg:w-6/12 justify-center lg:pt-24 items-center md:items-start text-center lg:text-left mb-5 md:mb-0 gap-10">
+                    class="flex flex-col w-full lg:w-6/12 justify-center lg:pt-24 items-center md:items-start text-center lg:text-left mb-5 md:mb-0 gap-20">
                     <div class="relative">
                         <h1 data-aos="fade-right" data-aos-once="true"
-                            class="my-4 text-3xl md:text-6xl font-bold leading-tight text-slate-900 text-start mx-auto">
+                            class="my-2 md:my-4 text-3xl md:text-6xl font-bold tracking-wide text-slate-900 text-start mx-auto md:leading-normal">
                             Ignite YouTube<br />Achieve, Monetise<br />Get Free Boost
                         </h1>
                         <!-- underline -->
@@ -103,15 +103,15 @@
                                 </svg>
                             </div>
                             <input id="member_email"
-                                class="formkit-input bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5"
+                                class="formkit-input bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5 md:py-4"
                                 name="email_address" aria-label="Email Address" placeholder="youtu.be/tubeforces"
                                 required="" type="email">
                         </div>
                         <button type="submit"
-                            class="flex gap-2 rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500">
+                            class="flex gap-2 rounded-md bg-indigo-500 px-3.5 py-2.5 md:py-3 text-sm md:text-lg font-semibold text-white shadow-sm hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500">
                             Boost
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                                stroke="currentColor" class="w-5 h-5 items-center">
+                                stroke="currentColor" class="w-5 h-5 md:w-6 md:h-6 items-center">
                                 <path stroke-linecap="round" stroke-linejoin="round"
                                     d="M15.59 14.37a6 6 0 01-5.84 7.38v-4.8m5.84-2.58a14.98 14.98 0 006.16-12.12A14.98 14.98 0 009.631 8.41m5.96 5.96a14.926 14.926 0 01-5.841 2.58m-.119-8.54a6 6 0 00-7.381 5.84h4.8m2.581-5.84a14.927 14.927 0 00-2.58 5.84m2.699 2.7c-.103.021-.207.041-.311.06a15.09 15.09 0 01-2.448-2.448 14.9 14.9 0 01.06-.312m-2.24 2.39a4.493 4.493 0 00-1.757 4.306 4.493 4.493 0 004.306-1.758M16.5 9a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0z" />
                             </svg>
@@ -126,12 +126,12 @@
                     <img src="img/model-bg.png" class="w-10/12 mx-auto z-auto ">
                     <!-- youtube -->
                     <div data-aos="fade-up" data-aos-delay="300" data-aos-once="true"
-                        class="absolute top-20 left-0 sm:top-32 sm:left-10 md:top-20 md:left-16 lg:-left-0 floating-4">
+                        class="absolute top-20 left-0 sm:top-32 sm:left-10 md:top-20 md:left-16 lg:left-20 floating-4">
                         <img src="img/youtube-logo.png">
                     </div>
                     <!-- rocket-->
                     <div data-aos="fade-up" data-aos-delay="400" data-aos-once="true"
-                        class="absolute -top-2 left-48 md:top-0 md:left-80 floating">
+                        class="absolute -top-2 left-48 md:top-0 md:left-96 floating">
                         <img src="img/rocket.png">
                     </div>
 
@@ -149,6 +149,11 @@
                     <div data-aos="fade-up" data-aos-delay="600" data-aos-once="true"
                         class="absolute -bottom-12 sm:bottom-12 right-0 sm:right-20 floating-4">
                         <img class="h-12 sm:h-16" src="img/subscribed.png" alt="">
+                    </div>
+                    <!-- like -->
+                    <div data-aos="fade-up" data-aos-delay="600" data-aos-once="true"
+                        class="absolute -bottom-32 sm:-bottom-20 right-40 sm:right-60 floating-4">
+                        <img class="h-12 sm:h-16" src="img/like.png" alt="">
                     </div>
                 </div>
             </div>
@@ -566,13 +571,14 @@
 
         <!-- Customer Review Section Start-->
         <section id="customers-review">
-            <div id="controls-carousel" class="relative w-full my-16 mt-10 md:mb-32 px-6 text-center overflow-hidden" data-carousel="static">
+            <div id="animation-carousel" class="relative w-full my-16 mt-10 md:mb-32 px-6 text-center overflow-hidden"
+                data-carousel="static">
                 <h1 data-aos="fade-right" data-aos-once="true"
                     class="text-3xl lg:text-5xl font-bold leading-tight text-slate text-center">
                     What customers say about TubeForces?
                 </h1>
                 <div class="relative overflow-hidden rounded-lg h-[700px] container mx-auto">
-                    <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                    <div class="hidden duration-700 ease-in-out" data-carousel-item="active">
                         <div class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
 
                             <div class="mt-8 flex items-center gap-4 justify-center flex-col">
@@ -626,7 +632,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="hidden duration-700 ease-in-out" data-carousel-item="active">
+                    <div class="hidden duration-700 ease-in-out" data-carousel-item>
                         <div class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
                             <div class="mt-8 flex items-center gap-4 justify-center flex-col">
                                 <img src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/bonnie-green.png"
@@ -679,7 +685,60 @@
                             </div>
                         </div>
                     </div>
+                    <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                        <div class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
 
+                            <div class="mt-8 flex items-center gap-4 justify-center flex-col">
+                                <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=facearea&amp;facepad=2&amp;w=256&amp;h=256&amp;q=80"
+                                    alt=""
+                                    class="h-36 w-36 rounded-full border-8 border-white shadow-2xl shadow-stone-100">
+                                <h2 class="font-bold text-xl mt-5">We are very happy with the final result of the
+                                    website.
+                                </h2>
+                                <p class="text-center mt-5 text-gray-500">TubeForces skyrocketed my YouTube presence!
+                                    Swiftly
+                                    TubeForces skyrocketed my YouTube presence! Swiftly increasing views, likes, and
+                                    subscribers
+                                    by
+                                    connecting my videos with like-minded audiences. A game-changer for content creators
+                                    seeking
+                                    rapid
+                                    and genuine growth. Highly recommend!
+                                </p>
+                                <div class="flex items-center">
+                                    <svg class="w-6 h-6 text-yellow-300 ms-1" aria-hidden="true"
+                                        xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                                        <path
+                                            d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                                    </svg>
+                                    <svg class="w-6 h-6 text-yellow-300 ms-1" aria-hidden="true"
+                                        xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                                        <path
+                                            d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                                    </svg>
+                                    <svg class="w-6 h-6 text-yellow-300 ms-1" aria-hidden="true"
+                                        xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                                        <path
+                                            d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                                    </svg>
+                                    <svg class="w-6 h-6 text-yellow-300 ms-1" aria-hidden="true"
+                                        xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                                        <path
+                                            d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                                    </svg>
+                                    <svg class="w-6 h-6 ms-1 text-gray-300 dark:text-gray-500" aria-hidden="true"
+                                        xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                                        <path
+                                            d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h3 class="text-lg font-bold mt-5">John Doe</h3>
+                                    <p class="text-gray-500">CEO of Company</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <!-- Slider controls -->
                 <div class="flex justify-center">
@@ -921,7 +980,7 @@
             class="text-3xl lg:text-5xl font-bold leading-tight text-slate text-center mb-16">
             Latest blogs & news
         </h1>
-        <div class="grid md:grid-cols-3 gap-2">
+        <div class="grid md:grid-cols-3 gap-20">
             <div class="max-w-lg mx-auto">
                 <div class="bg-transparent rounded-lg max-w-sm mb-5">
                     <a href="#">
