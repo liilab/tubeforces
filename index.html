@@ -20,6 +20,8 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="./tailwind.config.js"></script>
 
+
+
 </head>
 
 <body class="antialiased">
@@ -79,7 +81,7 @@
                     class="flex flex-col w-full xl:w-6/12 justify-center lg:pt-24 items-center sm:items-start text-center lg:text-left mb-5 md:mb-0 gap-20 mx-auto">
                     <div class="relative">
                         <h1 data-aos="fade-right" data-aos-once="true"
-                            class="md:my-4 text-3xl md:text-6xl font-bold tracking-wide text-slate-900 text-start mx-auto md:leading-snug xl:leading-normal z-50">
+                            class="md:my-4 text-3xl md:text-6xl font-bold tracking-wide text-slate-900 text-start mx-auto md:leading-tight xl:leading-snug z-50">
                             Ignite YouTube<br />Achieve, Monetise<br />Get Free Boost
                         </h1>
                         <!-- underline -->
@@ -128,7 +130,7 @@
                     <!-- rocket-->
                     <div data-aos="fade-up" data-aos-delay="400" data-aos-once="true"
                         class="absolute -top-10 left-52 sm:top-0 sm:left-96 floating">
-                        <img src="img/rocket.png" class="img-fluid">
+                        <img src="img/rocket.png" class="img-fluid-7">
                     </div>
 
                     <!-- eye-->
@@ -190,7 +192,7 @@
 
     <!-- Tools Promotion Section Start -->
     <section id="tools-promotion"
-        class="p-6 py-10 md:py-32 mb-10 bg-gray-50 w-full bg-[url('/img/center-left-red-bg.png')] bg-no-repeat bg-contain">
+        class="p-6 py-10 md:py-32 mb-16 bg-gray-50 w-full bg-[url('/img/center-left-red-bg.png')] bg-no-repeat bg-contain">
         <div>
             <h1 data-aos="fade-right" data-aos-once="true"
                 class="text-3xl lg:text-5xl font-bold leading-tight text-slate text-center md:mb-6">
@@ -204,9 +206,9 @@
                 <div data-aos="fade-down" class="md:w-5/12 mt-10 md:mt-0">
                     <div id="tools" class="flex flex-col gap-3">
                         <div class="hover:bg-white hover:shadow p-6 rounded-md">
-                            <div class="hover:border-r-4 border-indigo-500 mx-2">
-                                <h2 class="mb-0" id="tool-heading-1">
-                                    <button class="group relative flex w-full items-center rounded-none border-0 pe-5
+                            <div class="border-r-4 border-indigo-500 mx-2">
+                                <div class="mb-0" id="tool-heading-1">
+                                    <button id="tab-1" class="group relative flex w-full items-center rounded-none border-0 pe-5
                                     text-left text-base font-bold transition [overflow-anchor:none] hover:z-[2]
                                     focus:z-[3] focus:outline-none [&:not([data-te-collapse-collapsed])]:text-primary"
                                         type="button" data-te-collapse-init data-te-target="#tools-heading-1"
@@ -274,10 +276,10 @@
                                                     </defs>
                                                 </svg>
                                             </div>
-                                            <p>Tag Extractor</p>
+                                            <h2>Tag Extractor</h2>
                                         </div>
                                     </button>
-                                </h2>
+                                </div>
                                 <div id="tools-heading-1" class="!visible border-0" data-te-collapse-item
                                     data-te-collapse-show aria-labelledby="tools-heading-1" data-te-parent="#tools">
                                     <div class="ms-12 px-1 text-neutral-500">
@@ -288,8 +290,8 @@
                             </div>
                         </div>
                         <div class="hover:bg-white hover:shadow p-6 rounded-md">
-                            <div class="hover:border-r-4 border-indigo-500 mx-2">
-                                <h2 class="mb-0" id="tool-heading-2">
+                            <div class="border-r-4 border-none border-indigo-500 mx-2">
+                                <div class="mb-0" id="tool-heading-2">
                                     <button class="group relative flex w-full items-center rounded-none border-0 pe-5
                                     text-left text-base font-bold transition [overflow-anchor:none] hover:z-[2]
                                     focus:z-[3] focus:outline-none [&:not([data-te-collapse-collapsed])]:text-primary"
@@ -374,10 +376,10 @@
                                                     </defs>
                                                 </svg>
                                             </div>
-                                            <p>Keyword Suggestions</p>
+                                            <h2>Keyword Suggestions</h2>
                                         </div>
                                     </button>
-                                </h2>
+                                </div>
                                 <div id="tools-heading-2" class="!visible hidden border-0" data-te-collapse-item
                                     data-te-collapse-show aria-labelledby="tools-heading-2" data-te-parent="#tools">
                                     <div class="ms-12 px-1 text-neutral-500">
@@ -388,8 +390,8 @@
                             </div>
                         </div>
                         <div class="hover:bg-white hover:shadow p-6 rounded-md">
-                            <div class="hover:border-r-4 border-indigo-500 mx-2">
-                                <h2 class="mb-0" id="tool-heading-3">
+                            <div class="border-r-4 border-none border-indigo-500 mx-2">
+                                <div class="mb-0" id="tool-heading-3">
                                     <button class="group relative flex w-full items-center rounded-none border-0 pe-5
                                     text-left text-base font-bold transition [overflow-anchor:none] hover:z-[2]
                                     focus:z-[3] focus:outline-none [&:not([data-te-collapse-collapsed])]:text-primary"
@@ -507,10 +509,10 @@
                                                     </defs>
                                                 </svg>
                                             </div>
-                                            <p>Rank Checker</p>
+                                            <h2>Rank Checker</h2>
                                         </div>
                                     </button>
-                                </h2>
+                                </div>
                                 <div id="tools-heading-3" class="!visible hidden border-0" data-te-collapse-item
                                     data-te-collapse-show aria-labelledby="tools-heading-3" data-te-parent="#tools">
                                     <div class="ms-12 px-1 text-neutral-500">
@@ -529,13 +531,13 @@
 
     <!-- Customer Review Section Start-->
     <section id="customers-review" class="bg-[url('/img/review-bg.png')] bg-no-repeat bg-contain">
-        <div id="animation-carousel" class="relative w-full my-16 mt-10 md:mb-32 px-6 text-center"
+        <div id="animation-carousel" class="relative w-full my-16 md:mb-32 px-6 text-center"
             data-carousel="static">
             <h1 data-aos="fade-right" data-aos-once="true"
                 class="text-3xl lg:text-5xl font-bold leading-tight text-slate text-center">
                 What customers say about TubeForces?
             </h1>
-            <div class="relative overflow-hidden rounded-lg h-[700px] container mx-auto">
+            <div class="relative overflow-x-hidden rounded-lg h-[700px] container mx-auto">
                 <div class="hidden duration-700 ease-in-out" data-carousel-item="active">
                     <div class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
 
@@ -765,7 +767,7 @@
                     </button>
 
                     <svg width="282" height="78" viewBox="0 0 282 78" fill="none" xmlns="http://www.w3.org/2000/svg"
-                        class="absolute -right-16 -bottom-10 img-fluid">
+                        class="absolute -right-2 -bottom-20 lg:-right-0 lg:-bottom-20 img-fluid">
                         <path
                             d="M2 51.2809C15 65.4475 44.6 88.3809 59 66.7809C62.3333 61.7809 68.1 50.4809 62.5 31.2809C60.6042 24.7809 62 15.9765 82 23.2809C101.167 30.2808 142.3 42.0808 153.5 33.2808C156.682 30.7809 159.9 27.6808 159.5 13.2808C159.208 2.78076 177 -8.51921 205 20.2808"
                             stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
@@ -798,13 +800,16 @@
             <div data-aos="zoom-in-up" class="my-14 flex flex-col lg:flex-row lg:space-x-20">
                 <div class="lg:w-6/12">
                     <div class="text-center md:text-start relative">
-                        <h1 data-aos="fade-right" data-aos-once="true"
-                            class="text-3xl lg:text-5xl font-bold leading-tight text-slate text-center md:text-start mb-16">
-                            Frequently<br />Asked Questions
-                        </h1>
+                        <div class="relative">
+                            <h1 data-aos="fade-right" data-aos-once="true"
+                                class="text-3xl lg:text-5xl font-bold leading-tight text-slate text-center md:text-start mb-16">
+                                Frequently<br />Asked Questions
+                            </h1>
 
-                        <img src="img/underline.png" data-aos="fade-up" data-aos-delay="300" data-aos-once="true"
-                            class="absolute top-16 md:top-24 left-20 sm:left-56 md:left-52 z-0 w-56" alt="underline">
+                            <img src="img/underline.png" data-aos="fade-up" data-aos-delay="300" data-aos-once="true"
+                                class="absolute top-16 left-20 lg:top-24 lg:left-44 z-0 w-56"
+                                alt="underline">
+                        </div>
 
                         <h2 data-aos="fade-right" data-aos-delay="300" data-aos-once="true"
                             class="my-4 text-sm leading-tight text-slate-400 font-medium">
@@ -1199,6 +1204,9 @@
 
         glide04.mount();
     </script>
+    <script type='text/javascript' src='https://liilab.com/wp-includes/js/jquery/jquery.min.js?ver=3.7.0'
+        id='jquery-core-js'></script>
+    <script src="./main.js"></script>
 </body>
 
 </html>
