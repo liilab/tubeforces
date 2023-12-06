@@ -12,34 +12,22 @@
     <!-- AOS -->
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <!-- Custom style -->
-
+   
     <link
         href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
         rel="stylesheet">
     <!-- Tailwind -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="css/style.css" />
-    <style type="text/tailwindcss">
-        @layer base {
-            @variants {
-                .btn-primary {
-                     @apply rounded-md bg-blue-600 px-4 py-2.5 text-sm md:text-lg font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-500;
-                }
-            }
-        }
-    </style>
-
-
-
 </head>
 
 <body class="antialiased">
     <!-- Navbar Start -->
-    <section id="navbar" class="section-gap pt-0 bg-cream">
-        <div x-data="{ open: false }" class="w-full text-gray-700 items-center pt-4 md:pt-0">
+    <section id="navbar" class="md:mb-32 bg-cream sm:bg-none relative">
+        <div x-data="{ open: false }" class="w-full text-gray-700 z-10 relative">
             <div class="flex flex-col container px-8 md:px-0 md:items-center md:justify-between md:flex-row mx-auto">
-                <div class="flex flex-row items-center justify-between">
-                    <div class="relative">
+                <div class="flex flex-row items-center justify-between py-6">
+                    <div class="relative md:mt-6">
                         <a href="#">
 
                             <svg width="209" height="38" viewBox="0 0 209 38" fill="none"
@@ -69,25 +57,28 @@
                     </button>
                 </div>
                 <nav :class="{ 'transform md:transform-none': !open, 'h-full scale-y-100 overflow-y-auto': open }"
-                    class="md:ms-10 h-0 md:h-auto flex flex-col flex-grow pb-4 md:pb-0 md:flex md:justify-start md:flex-row origin-top duration-300 scale-y-0 mt-6 gap-4">
-                    <a class="mt-2 text-md bg-transparent rounded-lg md:ms-4 hover:text-gray-900 focus:outline-none focus:shadow-outline"
+                    class="h-0 md:h-auto flex flex-col flex-grow md:items-center pb-4 md:pb-0 md:flex md:justify-start md:flex-row origin-top duration-300 scale-y-0">
+                    <a class="px-4 py-2 mt-2 text-md bg-transparent rounded-lg md:mt-8 md:ms-4 hover:text-gray-900 focus:outline-none focus:shadow-outline"
                         href="#">Home</a>
-                    <a class="mt-2 text-md bg-transparent rounded-lg md:ms-4 hover:text-gray-900 focus:outline-none focus:shadow-outline"
-                        href="/#customers-review">Review</a>
-                    <a class="mt-2 text-md bg-transparent rounded-lg md:ms-4 hover:text-gray-900 focus:outline-none focus:shadow-outline"
+                    <a class="px-4 py-2 mt-2 text-md bg-transparent rounded-lg md:mt-8 md:ms-4 hover:text-gray-900 focus:outline-none focus:shadow-outline"
+                        href="#">Careers</a>
+                    <a class="px-4 py-2 mt-2 text-md bg-transparent rounded-lg md:mt-8 md:ms-4 hover:text-gray-900 focus:outline-none focus:shadow-outline"
                         href="#">Blog</a>
-                    <a class="md:ms-auto mt-2 btn-primary" href="#">My Account</a>
+                    <a class="px-4 py-2 mt-2 text-md bg-transparent rounded-lg md:mt-8 md:ms-4 hover:text-gray-900 focus:outline-none focus:shadow-outline"
+                        href="#">About Us</a>
+                    <a class="px-6 py-3 mt-2 text-md text-center bg-blue-500 text-white rounded-md md:mt-8 md:ms-auto font-semibold"
+                        href="#">My Account</a>
                 </nav>
             </div>
         </div>
-        <div class="relative mx-auto pb-20 xl:pb-32">
-            <div class="container p-8 pt-0 lg:py-10 xl:pt-24 mx-auto flex flex-col lg:flex-row items-center lg:gap-32">
+        <div class="relative mx-auto pb-32 z-10">
+            <div class="container p-8 py-10 md:pt-24 mx-auto flex flex-col lg:flex-row items-center md:gap-32">
                 <!--Left Col-->
                 <div
                     class="flex flex-col w-full lg:w-6/12 justify-center items-center text-center lg:text-left mb-5 md:mb-0 gap-20 mx-auto">
                     <div class="relative">
                         <h1 data-aos="fade-right" data-aos-once="true"
-                            class="md:my-4 text-[32px] sm:text-[45px] leading-[40px] sm:leading-[50px] lg:text-4xl xl:text-5xl 2xl:text-6xl font-extrabold lg:font-bold tracking-wide text-slate-900 text-start mx-auto md:leading-tight lg:leading-snug z-0">
+                            class="md:my-4 text-[32px] sm:text-[45px] leading-[40px] sm:leading-[50px] lg:text-5xl xl:text-6xl font-extrabold lg:font-bold tracking-wide text-slate-900 text-start mx-auto md:leading-tight lg:leading-snug z-0">
                             Ignite YouTube<br />Achieve, Monetise<br />Get Free Boost
                         </h1>
                         <!-- underline -->
@@ -99,7 +90,7 @@
 
                     <div data-element="fields" data-stacked="false"
                         class="flex items-center w-full sm:max-w-sm md:max-w-lg max-w-screen-lg mb-10">
-                        <div class="relative w-full me-3">
+                        <div class="relative w-full mr-3 formkit-field">
                             <div class="absolute inset-y-0 left-0 flex items-center pl-3.5 pointer-events-none">
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                     stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
@@ -112,7 +103,8 @@
                                 name="email_address" aria-label="Email Address" placeholder="youtu.be/tubeforces"
                                 required="" type="email">
                         </div>
-                        <button type="submit" class="flex gap-2 btn-primary">
+                        <button type="submit"
+                            class="flex gap-2 rounded-md bg-indigo-500 px-3.5 py-2.5 md:py-3 text-sm md:text-lg font-semibold text-white shadow-sm hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500">
                             Boost
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                                 stroke="currentColor" class="w-5 h-5 md:w-6 md:h-6 items-center">
@@ -161,7 +153,7 @@
                                     </linearGradient>
                                 </defs>
                             </svg>
-                            <h1 class="font-extrabold text-sm sm:text-md md:text-lg lg:text-3xl">70%</h1>
+                            <h1 class="font-extrabold text-sm sm:text-md md:text-xl lg:text-3xl">70%</h1>
                             <p class="text-gray-500 font-medium text-xs md:text-md">Monthly Growth</p>
                         </div>
                     </div>
@@ -178,17 +170,823 @@
                 </div>
             </div>
         </div>
+
+        <!-- Navbar End-->
+
+        <!-- Our Services Section Start -->
+        <div class="relative">
+            <div class="absolute hidden sm:block -top-[500%] bottom-52 w-full">
+                <svg class="absolute inset-0 h-full w-full z-00" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <pattern id="all-access-grid-pattern" width="32" height="32" patternUnits="userSpaceOnUse"
+                            x="50%" y="100%" patternTransform="translate(0 -1)">
+                            <path d="M0 32V.5H32" fill="none" stroke="currentColor"></path>
+                        </pattern>
+                    </defs>
+                    <rect width="100%" height="100%" fill="url(#all-access-grid-pattern)"></rect>
+                </svg>
+            </div>
+            <div class="relative z-10 bg-white container mx-auto shadow-lg rounded-md">
+                <div class="p-5 py-10 mb-10 bg-[url('/img/upper-right-red-bg.png')] bg-no-repeat bg-contain">
+                    <h1 data-aos="fade-right" data-aos-once="true"
+                        class="text-3xl lg:text-5xl font-bold leading-tight text-slate text-center mb-12 lg:mb-16">
+                        Here’s how it works!
+                    </h1>
+
+                    <div class="mb-4 border-b border-gray-200 dark:border-gray-700">
+                        <ul class="flex flex-wrap -mb-px text-sm font-medium text-center" id="default-tab"
+                            data-tabs-toggle="#default-tab-content" role="tablist">
+                            <li class="me-2" role="presentation">
+                                <button class="inline-block p-4 border-b-2 rounded-t-lg" id="profile-tab"
+                                    data-tabs-target="#profile" type="button" role="tab" aria-controls="profile"
+                                    aria-selected="false">Profile
+                                </button>
+                            </li>
+                            <li class="me-2" role="presentation">
+                                <button
+                                    class="inline-block p-4 border-b-2 rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300"
+                                    id="dashboard-tab" data-tabs-target="#dashboard" type="button" role="tab"
+                                    aria-controls="dashboard" aria-selected="false">Dashboard
+                                </button>
+                            </li>
+                            <li class="me-2" role="presentation">
+                                <button
+                                    class="inline-block p-4 border-b-2 rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300"
+                                    id="settings-tab" data-tabs-target="#settings" type="button" role="tab"
+                                    aria-controls="settings" aria-selected="false">Settings
+                                </button>
+                            </li>
+                            <li role="presentation">
+                                <button
+                                    class="inline-block p-4 border-b-2 rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300"
+                                    id="contacts-tab" data-tabs-target="#contacts" type="button" role="tab"
+                                    aria-controls="contacts" aria-selected="false">Contacts
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                    <div id="default-tab-content">
+                        <div class="hidden rounded-lg" id="profile" role="tabpanel"
+                            aria-labelledby="profile-tab">
+                            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 px-2 gap-5">
+                            <div class="w-full max-w-sm p-4 rounded-lg sm:p-8 bg-card-orange">
+                                <div class="flex items-baseline text-gray-900 dark:text-white">
+                                    <span class="text-5xl font-extrabold tracking-tight">$49</span>
+                                    <span class="ms-auto">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="70" height="72" viewBox="0 0 70 72"
+                                            fill="none">
+                                            <circle cx="50" cy="52" r="20" fill="#FB8A57" />
+                                            <g opacity="0.6">
+                                                <circle cx="2.28571" cy="2.28571" r="2.28571" fill="#FB8A57" />
+                                                <circle cx="11.4286" cy="2.28571" r="2.28571" fill="#FB8A57" />
+                                                <circle cx="20.5715" cy="2.28571" r="2.28571" fill="#FB8A57" />
+                                                <circle cx="29.7144" cy="2.28571" r="2.28571" fill="#FB8A57" />
+                                                <circle cx="2.28571" cy="11.429" r="2.28571" fill="#FB8A57" />
+                                                <circle cx="11.4286" cy="11.429" r="2.28571" fill="#FB8A57" />
+                                                <circle cx="20.5715" cy="11.429" r="2.28571" fill="#FB8A57" />
+                                                <circle cx="29.7144" cy="11.429" r="2.28571" fill="#FB8A57" />
+                                                <circle cx="2.28571" cy="20.5709" r="2.28571" fill="#FB8A57" />
+                                                <circle cx="11.4286" cy="20.5709" r="2.28571" fill="#FB8A57" />
+                                                <circle cx="20.5715" cy="20.5709" r="2.28571" fill="#FB8A57" />
+                                                <circle cx="29.7144" cy="20.5709" r="2.28571" fill="#FB8A57" />
+                                                <circle cx="2.28571" cy="29.7142" r="2.28571" fill="#FB8A57" />
+                                                <circle cx="11.4286" cy="29.7142" r="2.28571" fill="#FB8A57" />
+                                                <circle cx="20.5715" cy="29.7142" r="2.28571" fill="#FB8A57" />
+                                                <circle cx="29.7144" cy="29.7142" r="2.28571" fill="#FB8A57" />
+                                            </g>
+                                            <g filter="url(#filter0_b_530_1605)">
+                                                <path
+                                                    d="M13.6667 36.9998V27.5065C13.6667 15.7198 22.0133 10.8931 32.2267 16.7865L40.4667 21.5331L48.7067 26.2798C58.92 32.1731 58.92 41.8265 48.7067 47.7198L40.4667 52.4665L32.2267 57.2131C22.0133 63.1065 13.6667 58.2798 13.6667 46.4931V36.9998Z"
+                                                    fill="url(#paint0_linear_530_1605)" />
+                                                <path
+                                                    d="M13.6667 36.9998V27.5065C13.6667 15.7198 22.0133 10.8931 32.2267 16.7865L40.4667 21.5331L48.7067 26.2798C58.92 32.1731 58.92 41.8265 48.7067 47.7198L40.4667 52.4665L32.2267 57.2131C22.0133 63.1065 13.6667 58.2798 13.6667 46.4931V36.9998Z"
+                                                    stroke="#292D32" stroke-width="3" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                            </g>
+                                            <defs>
+                                                <filter id="filter0_b_530_1605" x="2.16666" y="2.77124" width="65.7"
+                                                    height="68.4573" filterUnits="userSpaceOnUse"
+                                                    color-interpolation-filters="sRGB">
+                                                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                                                    <feGaussianBlur in="BackgroundImageFix" stdDeviation="5" />
+                                                    <feComposite in2="SourceAlpha" operator="in"
+                                                        result="effect1_backgroundBlur_530_1605" />
+                                                    <feBlend mode="normal" in="SourceGraphic"
+                                                        in2="effect1_backgroundBlur_530_1605" result="shape" />
+                                                </filter>
+                                                <linearGradient id="paint0_linear_530_1605" x1="71" y1="17.9998" x2="15.3235"
+                                                    y2="45.208" gradientUnits="userSpaceOnUse">
+                                                    <stop stop-color="#F5F5F5" />
+                                                    <stop offset="1" stop-color="#F5F5F5" stop-opacity="0" />
+                                                </linearGradient>
+                                            </defs>
+                                        </svg>
+                                    </span>
+                                </div>
+                                <ul role="list" class="space-y-5 my-7">
+                                    <li class="flex items-center">
+                                        <svg class="flex-shrink-0 w-4 h-4 text-orange-500" aria-hidden="true"
+                                            xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                                            <path
+                                                d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
+                                        </svg>
+                                        <span
+                                            class="text-base font-normal leading-tight text-gray-500 dark:text-gray-400 ms-3">2
+                                            team members</span>
+                                    </li>
+                                    <li class="flex">
+                                        <svg class="flex-shrink-0 w-4 h-4 text-orange-500 " aria-hidden="true"
+                                            xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                                            <path
+                                                d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
+                                        </svg>
+                                        <span
+                                            class="text-base font-normal leading-tight text-gray-500 dark:text-gray-400 ms-3">20GB
+                                            Cloud storage</span>
+                                    </li>
+                                    <li class="flex">
+                                        <svg class="flex-shrink-0 w-4 h-4 text-orange-500 " aria-hidden="true"
+                                            xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                                            <path
+                                                d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
+                                        </svg>
+                                        <span
+                                            class="text-base font-normal leading-tight text-gray-500 dark:text-gray-400 ms-3">Integration
+                                            help</span>
+                                    </li>
+                                </ul>
+                                <button type="button"
+                                    class="text-white bg-orange-500 hover:bg-orange-700 focus:ring-4 focus:outline-none focus:ring-orange-200 dark:focus:ring-orange-900 font-medium rounded-lg text-sm px-10 py-2.5 inline-flex justify-center w-full text-center">
+                                    Choose plan
+                                </button>
+                            </div>
+                            <div class="w-full max-w-sm p-4 rounded-lg sm:p-8 bg-card-orange">
+                                <div class="flex items-baseline text-gray-900 dark:text-white">
+                                    <span class="text-5xl font-extrabold tracking-tight">$49</span>
+                                    <span class="ms-auto">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="70" height="72" viewBox="0 0 70 72"
+                                            fill="none">
+                                            <circle cx="50" cy="52" r="20" fill="#FB8A57" />
+                                            <g opacity="0.6">
+                                                <circle cx="2.28571" cy="2.28571" r="2.28571" fill="#FB8A57" />
+                                                <circle cx="11.4286" cy="2.28571" r="2.28571" fill="#FB8A57" />
+                                                <circle cx="20.5715" cy="2.28571" r="2.28571" fill="#FB8A57" />
+                                                <circle cx="29.7144" cy="2.28571" r="2.28571" fill="#FB8A57" />
+                                                <circle cx="2.28571" cy="11.429" r="2.28571" fill="#FB8A57" />
+                                                <circle cx="11.4286" cy="11.429" r="2.28571" fill="#FB8A57" />
+                                                <circle cx="20.5715" cy="11.429" r="2.28571" fill="#FB8A57" />
+                                                <circle cx="29.7144" cy="11.429" r="2.28571" fill="#FB8A57" />
+                                                <circle cx="2.28571" cy="20.5709" r="2.28571" fill="#FB8A57" />
+                                                <circle cx="11.4286" cy="20.5709" r="2.28571" fill="#FB8A57" />
+                                                <circle cx="20.5715" cy="20.5709" r="2.28571" fill="#FB8A57" />
+                                                <circle cx="29.7144" cy="20.5709" r="2.28571" fill="#FB8A57" />
+                                                <circle cx="2.28571" cy="29.7142" r="2.28571" fill="#FB8A57" />
+                                                <circle cx="11.4286" cy="29.7142" r="2.28571" fill="#FB8A57" />
+                                                <circle cx="20.5715" cy="29.7142" r="2.28571" fill="#FB8A57" />
+                                                <circle cx="29.7144" cy="29.7142" r="2.28571" fill="#FB8A57" />
+                                            </g>
+                                            <g filter="url(#filter0_b_530_1605)">
+                                                <path
+                                                    d="M13.6667 36.9998V27.5065C13.6667 15.7198 22.0133 10.8931 32.2267 16.7865L40.4667 21.5331L48.7067 26.2798C58.92 32.1731 58.92 41.8265 48.7067 47.7198L40.4667 52.4665L32.2267 57.2131C22.0133 63.1065 13.6667 58.2798 13.6667 46.4931V36.9998Z"
+                                                    fill="url(#paint0_linear_530_1605)" />
+                                                <path
+                                                    d="M13.6667 36.9998V27.5065C13.6667 15.7198 22.0133 10.8931 32.2267 16.7865L40.4667 21.5331L48.7067 26.2798C58.92 32.1731 58.92 41.8265 48.7067 47.7198L40.4667 52.4665L32.2267 57.2131C22.0133 63.1065 13.6667 58.2798 13.6667 46.4931V36.9998Z"
+                                                    stroke="#292D32" stroke-width="3" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                            </g>
+                                            <defs>
+                                                <filter id="filter0_b_530_1605" x="2.16666" y="2.77124" width="65.7"
+                                                    height="68.4573" filterUnits="userSpaceOnUse"
+                                                    color-interpolation-filters="sRGB">
+                                                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                                                    <feGaussianBlur in="BackgroundImageFix" stdDeviation="5" />
+                                                    <feComposite in2="SourceAlpha" operator="in"
+                                                        result="effect1_backgroundBlur_530_1605" />
+                                                    <feBlend mode="normal" in="SourceGraphic"
+                                                        in2="effect1_backgroundBlur_530_1605" result="shape" />
+                                                </filter>
+                                                <linearGradient id="paint0_linear_530_1605" x1="71" y1="17.9998" x2="15.3235"
+                                                    y2="45.208" gradientUnits="userSpaceOnUse">
+                                                    <stop stop-color="#F5F5F5" />
+                                                    <stop offset="1" stop-color="#F5F5F5" stop-opacity="0" />
+                                                </linearGradient>
+                                            </defs>
+                                        </svg>
+                                    </span>
+                                </div>
+                                <ul role="list" class="space-y-5 my-7">
+                                    <li class="flex items-center">
+                                        <svg class="flex-shrink-0 w-4 h-4 text-orange-500" aria-hidden="true"
+                                            xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                                            <path
+                                                d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
+                                        </svg>
+                                        <span
+                                            class="text-base font-normal leading-tight text-gray-500 dark:text-gray-400 ms-3">2
+                                            team members</span>
+                                    </li>
+                                    <li class="flex">
+                                        <svg class="flex-shrink-0 w-4 h-4 text-orange-500 " aria-hidden="true"
+                                            xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                                            <path
+                                                d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
+                                        </svg>
+                                        <span
+                                            class="text-base font-normal leading-tight text-gray-500 dark:text-gray-400 ms-3">20GB
+                                            Cloud storage</span>
+                                    </li>
+                                    <li class="flex">
+                                        <svg class="flex-shrink-0 w-4 h-4 text-orange-500 " aria-hidden="true"
+                                            xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                                            <path
+                                                d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
+                                        </svg>
+                                        <span
+                                            class="text-base font-normal leading-tight text-gray-500 dark:text-gray-400 ms-3">Integration
+                                            help</span>
+                                    </li>
+                                </ul>
+                                <button type="button"
+                                    class="text-white bg-orange-500 hover:bg-orange-700 focus:ring-4 focus:outline-none focus:ring-orange-200 dark:focus:ring-orange-900 font-medium rounded-lg text-sm px-10 py-2.5 inline-flex justify-center w-full text-center">
+                                    Choose plan
+                                </button>
+                            </div>
+                            <div class="w-full max-w-sm p-4 rounded-lg sm:p-8 bg-card-orange">
+                                <div class="flex items-baseline text-gray-900 dark:text-white">
+                                    <span class="text-5xl font-extrabold tracking-tight">$49</span>
+                                    <span class="ms-auto">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="70" height="72" viewBox="0 0 70 72"
+                                            fill="none">
+                                            <circle cx="50" cy="52" r="20" fill="#FB8A57" />
+                                            <g opacity="0.6">
+                                                <circle cx="2.28571" cy="2.28571" r="2.28571" fill="#FB8A57" />
+                                                <circle cx="11.4286" cy="2.28571" r="2.28571" fill="#FB8A57" />
+                                                <circle cx="20.5715" cy="2.28571" r="2.28571" fill="#FB8A57" />
+                                                <circle cx="29.7144" cy="2.28571" r="2.28571" fill="#FB8A57" />
+                                                <circle cx="2.28571" cy="11.429" r="2.28571" fill="#FB8A57" />
+                                                <circle cx="11.4286" cy="11.429" r="2.28571" fill="#FB8A57" />
+                                                <circle cx="20.5715" cy="11.429" r="2.28571" fill="#FB8A57" />
+                                                <circle cx="29.7144" cy="11.429" r="2.28571" fill="#FB8A57" />
+                                                <circle cx="2.28571" cy="20.5709" r="2.28571" fill="#FB8A57" />
+                                                <circle cx="11.4286" cy="20.5709" r="2.28571" fill="#FB8A57" />
+                                                <circle cx="20.5715" cy="20.5709" r="2.28571" fill="#FB8A57" />
+                                                <circle cx="29.7144" cy="20.5709" r="2.28571" fill="#FB8A57" />
+                                                <circle cx="2.28571" cy="29.7142" r="2.28571" fill="#FB8A57" />
+                                                <circle cx="11.4286" cy="29.7142" r="2.28571" fill="#FB8A57" />
+                                                <circle cx="20.5715" cy="29.7142" r="2.28571" fill="#FB8A57" />
+                                                <circle cx="29.7144" cy="29.7142" r="2.28571" fill="#FB8A57" />
+                                            </g>
+                                            <g filter="url(#filter0_b_530_1605)">
+                                                <path
+                                                    d="M13.6667 36.9998V27.5065C13.6667 15.7198 22.0133 10.8931 32.2267 16.7865L40.4667 21.5331L48.7067 26.2798C58.92 32.1731 58.92 41.8265 48.7067 47.7198L40.4667 52.4665L32.2267 57.2131C22.0133 63.1065 13.6667 58.2798 13.6667 46.4931V36.9998Z"
+                                                    fill="url(#paint0_linear_530_1605)" />
+                                                <path
+                                                    d="M13.6667 36.9998V27.5065C13.6667 15.7198 22.0133 10.8931 32.2267 16.7865L40.4667 21.5331L48.7067 26.2798C58.92 32.1731 58.92 41.8265 48.7067 47.7198L40.4667 52.4665L32.2267 57.2131C22.0133 63.1065 13.6667 58.2798 13.6667 46.4931V36.9998Z"
+                                                    stroke="#292D32" stroke-width="3" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                            </g>
+                                            <defs>
+                                                <filter id="filter0_b_530_1605" x="2.16666" y="2.77124" width="65.7"
+                                                    height="68.4573" filterUnits="userSpaceOnUse"
+                                                    color-interpolation-filters="sRGB">
+                                                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                                                    <feGaussianBlur in="BackgroundImageFix" stdDeviation="5" />
+                                                    <feComposite in2="SourceAlpha" operator="in"
+                                                        result="effect1_backgroundBlur_530_1605" />
+                                                    <feBlend mode="normal" in="SourceGraphic"
+                                                        in2="effect1_backgroundBlur_530_1605" result="shape" />
+                                                </filter>
+                                                <linearGradient id="paint0_linear_530_1605" x1="71" y1="17.9998" x2="15.3235"
+                                                    y2="45.208" gradientUnits="userSpaceOnUse">
+                                                    <stop stop-color="#F5F5F5" />
+                                                    <stop offset="1" stop-color="#F5F5F5" stop-opacity="0" />
+                                                </linearGradient>
+                                            </defs>
+                                        </svg>
+                                    </span>
+                                </div>
+                                <ul role="list" class="space-y-5 my-7">
+                                    <li class="flex items-center">
+                                        <svg class="flex-shrink-0 w-4 h-4 text-orange-500" aria-hidden="true"
+                                            xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                                            <path
+                                                d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
+                                        </svg>
+                                        <span
+                                            class="text-base font-normal leading-tight text-gray-500 dark:text-gray-400 ms-3">2
+                                            team members</span>
+                                    </li>
+                                    <li class="flex">
+                                        <svg class="flex-shrink-0 w-4 h-4 text-orange-500 " aria-hidden="true"
+                                            xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                                            <path
+                                                d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
+                                        </svg>
+                                        <span
+                                            class="text-base font-normal leading-tight text-gray-500 dark:text-gray-400 ms-3">20GB
+                                            Cloud storage</span>
+                                    </li>
+                                    <li class="flex">
+                                        <svg class="flex-shrink-0 w-4 h-4 text-orange-500 " aria-hidden="true"
+                                            xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                                            <path
+                                                d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
+                                        </svg>
+                                        <span
+                                            class="text-base font-normal leading-tight text-gray-500 dark:text-gray-400 ms-3">Integration
+                                            help</span>
+                                    </li>
+                                </ul>
+                                <button type="button"
+                                    class="text-white bg-orange-500 hover:bg-orange-700 focus:ring-4 focus:outline-none focus:ring-orange-200 dark:focus:ring-orange-900 font-medium rounded-lg text-sm px-10 py-2.5 inline-flex justify-center w-full text-center">
+                                    Choose plan
+                                </button>
+                            </div>
+                            <div class="w-full max-w-sm p-4 rounded-lg sm:p-8 bg-card-orange">
+                                <div class="flex items-baseline text-gray-900 dark:text-white">
+                                    <span class="text-5xl font-extrabold tracking-tight">$49</span>
+                                    <span class="ms-auto">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="70" height="72" viewBox="0 0 70 72"
+                                            fill="none">
+                                            <circle cx="50" cy="52" r="20" fill="#FB8A57" />
+                                            <g opacity="0.6">
+                                                <circle cx="2.28571" cy="2.28571" r="2.28571" fill="#FB8A57" />
+                                                <circle cx="11.4286" cy="2.28571" r="2.28571" fill="#FB8A57" />
+                                                <circle cx="20.5715" cy="2.28571" r="2.28571" fill="#FB8A57" />
+                                                <circle cx="29.7144" cy="2.28571" r="2.28571" fill="#FB8A57" />
+                                                <circle cx="2.28571" cy="11.429" r="2.28571" fill="#FB8A57" />
+                                                <circle cx="11.4286" cy="11.429" r="2.28571" fill="#FB8A57" />
+                                                <circle cx="20.5715" cy="11.429" r="2.28571" fill="#FB8A57" />
+                                                <circle cx="29.7144" cy="11.429" r="2.28571" fill="#FB8A57" />
+                                                <circle cx="2.28571" cy="20.5709" r="2.28571" fill="#FB8A57" />
+                                                <circle cx="11.4286" cy="20.5709" r="2.28571" fill="#FB8A57" />
+                                                <circle cx="20.5715" cy="20.5709" r="2.28571" fill="#FB8A57" />
+                                                <circle cx="29.7144" cy="20.5709" r="2.28571" fill="#FB8A57" />
+                                                <circle cx="2.28571" cy="29.7142" r="2.28571" fill="#FB8A57" />
+                                                <circle cx="11.4286" cy="29.7142" r="2.28571" fill="#FB8A57" />
+                                                <circle cx="20.5715" cy="29.7142" r="2.28571" fill="#FB8A57" />
+                                                <circle cx="29.7144" cy="29.7142" r="2.28571" fill="#FB8A57" />
+                                            </g>
+                                            <g filter="url(#filter0_b_530_1605)">
+                                                <path
+                                                    d="M13.6667 36.9998V27.5065C13.6667 15.7198 22.0133 10.8931 32.2267 16.7865L40.4667 21.5331L48.7067 26.2798C58.92 32.1731 58.92 41.8265 48.7067 47.7198L40.4667 52.4665L32.2267 57.2131C22.0133 63.1065 13.6667 58.2798 13.6667 46.4931V36.9998Z"
+                                                    fill="url(#paint0_linear_530_1605)" />
+                                                <path
+                                                    d="M13.6667 36.9998V27.5065C13.6667 15.7198 22.0133 10.8931 32.2267 16.7865L40.4667 21.5331L48.7067 26.2798C58.92 32.1731 58.92 41.8265 48.7067 47.7198L40.4667 52.4665L32.2267 57.2131C22.0133 63.1065 13.6667 58.2798 13.6667 46.4931V36.9998Z"
+                                                    stroke="#292D32" stroke-width="3" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                            </g>
+                                            <defs>
+                                                <filter id="filter0_b_530_1605" x="2.16666" y="2.77124" width="65.7"
+                                                    height="68.4573" filterUnits="userSpaceOnUse"
+                                                    color-interpolation-filters="sRGB">
+                                                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                                                    <feGaussianBlur in="BackgroundImageFix" stdDeviation="5" />
+                                                    <feComposite in2="SourceAlpha" operator="in"
+                                                        result="effect1_backgroundBlur_530_1605" />
+                                                    <feBlend mode="normal" in="SourceGraphic"
+                                                        in2="effect1_backgroundBlur_530_1605" result="shape" />
+                                                </filter>
+                                                <linearGradient id="paint0_linear_530_1605" x1="71" y1="17.9998" x2="15.3235"
+                                                    y2="45.208" gradientUnits="userSpaceOnUse">
+                                                    <stop stop-color="#F5F5F5" />
+                                                    <stop offset="1" stop-color="#F5F5F5" stop-opacity="0" />
+                                                </linearGradient>
+                                            </defs>
+                                        </svg>
+                                    </span>
+                                </div>
+                                <ul role="list" class="space-y-5 my-7">
+                                    <li class="flex items-center">
+                                        <svg class="flex-shrink-0 w-4 h-4 text-orange-500" aria-hidden="true"
+                                            xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                                            <path
+                                                d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
+                                        </svg>
+                                        <span
+                                            class="text-base font-normal leading-tight text-gray-500 dark:text-gray-400 ms-3">2
+                                            team members</span>
+                                    </li>
+                                    <li class="flex">
+                                        <svg class="flex-shrink-0 w-4 h-4 text-orange-500 " aria-hidden="true"
+                                            xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                                            <path
+                                                d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
+                                        </svg>
+                                        <span
+                                            class="text-base font-normal leading-tight text-gray-500 dark:text-gray-400 ms-3">20GB
+                                            Cloud storage</span>
+                                    </li>
+                                    <li class="flex">
+                                        <svg class="flex-shrink-0 w-4 h-4 text-orange-500 " aria-hidden="true"
+                                            xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                                            <path
+                                                d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
+                                        </svg>
+                                        <span
+                                            class="text-base font-normal leading-tight text-gray-500 dark:text-gray-400 ms-3">Integration
+                                            help</span>
+                                    </li>
+                                </ul>
+                                <button type="button"
+                                    class="text-white bg-orange-500 hover:bg-orange-700 focus:ring-4 focus:outline-none focus:ring-orange-200 dark:focus:ring-orange-900 font-medium rounded-lg text-sm px-10 py-2.5 inline-flex justify-center w-full text-center">
+                                    Choose plan
+                                </button>
+                            </div>
+                            <div class="w-full max-w-sm p-4 rounded-lg sm:p-8 bg-card-orange">
+                                <div class="flex items-baseline text-gray-900 dark:text-white">
+                                    <span class="text-5xl font-extrabold tracking-tight">$49</span>
+                                    <span class="ms-auto">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="70" height="72" viewBox="0 0 70 72"
+                                            fill="none">
+                                            <circle cx="50" cy="52" r="20" fill="#FB8A57" />
+                                            <g opacity="0.6">
+                                                <circle cx="2.28571" cy="2.28571" r="2.28571" fill="#FB8A57" />
+                                                <circle cx="11.4286" cy="2.28571" r="2.28571" fill="#FB8A57" />
+                                                <circle cx="20.5715" cy="2.28571" r="2.28571" fill="#FB8A57" />
+                                                <circle cx="29.7144" cy="2.28571" r="2.28571" fill="#FB8A57" />
+                                                <circle cx="2.28571" cy="11.429" r="2.28571" fill="#FB8A57" />
+                                                <circle cx="11.4286" cy="11.429" r="2.28571" fill="#FB8A57" />
+                                                <circle cx="20.5715" cy="11.429" r="2.28571" fill="#FB8A57" />
+                                                <circle cx="29.7144" cy="11.429" r="2.28571" fill="#FB8A57" />
+                                                <circle cx="2.28571" cy="20.5709" r="2.28571" fill="#FB8A57" />
+                                                <circle cx="11.4286" cy="20.5709" r="2.28571" fill="#FB8A57" />
+                                                <circle cx="20.5715" cy="20.5709" r="2.28571" fill="#FB8A57" />
+                                                <circle cx="29.7144" cy="20.5709" r="2.28571" fill="#FB8A57" />
+                                                <circle cx="2.28571" cy="29.7142" r="2.28571" fill="#FB8A57" />
+                                                <circle cx="11.4286" cy="29.7142" r="2.28571" fill="#FB8A57" />
+                                                <circle cx="20.5715" cy="29.7142" r="2.28571" fill="#FB8A57" />
+                                                <circle cx="29.7144" cy="29.7142" r="2.28571" fill="#FB8A57" />
+                                            </g>
+                                            <g filter="url(#filter0_b_530_1605)">
+                                                <path
+                                                    d="M13.6667 36.9998V27.5065C13.6667 15.7198 22.0133 10.8931 32.2267 16.7865L40.4667 21.5331L48.7067 26.2798C58.92 32.1731 58.92 41.8265 48.7067 47.7198L40.4667 52.4665L32.2267 57.2131C22.0133 63.1065 13.6667 58.2798 13.6667 46.4931V36.9998Z"
+                                                    fill="url(#paint0_linear_530_1605)" />
+                                                <path
+                                                    d="M13.6667 36.9998V27.5065C13.6667 15.7198 22.0133 10.8931 32.2267 16.7865L40.4667 21.5331L48.7067 26.2798C58.92 32.1731 58.92 41.8265 48.7067 47.7198L40.4667 52.4665L32.2267 57.2131C22.0133 63.1065 13.6667 58.2798 13.6667 46.4931V36.9998Z"
+                                                    stroke="#292D32" stroke-width="3" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                            </g>
+                                            <defs>
+                                                <filter id="filter0_b_530_1605" x="2.16666" y="2.77124" width="65.7"
+                                                    height="68.4573" filterUnits="userSpaceOnUse"
+                                                    color-interpolation-filters="sRGB">
+                                                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                                                    <feGaussianBlur in="BackgroundImageFix" stdDeviation="5" />
+                                                    <feComposite in2="SourceAlpha" operator="in"
+                                                        result="effect1_backgroundBlur_530_1605" />
+                                                    <feBlend mode="normal" in="SourceGraphic"
+                                                        in2="effect1_backgroundBlur_530_1605" result="shape" />
+                                                </filter>
+                                                <linearGradient id="paint0_linear_530_1605" x1="71" y1="17.9998" x2="15.3235"
+                                                    y2="45.208" gradientUnits="userSpaceOnUse">
+                                                    <stop stop-color="#F5F5F5" />
+                                                    <stop offset="1" stop-color="#F5F5F5" stop-opacity="0" />
+                                                </linearGradient>
+                                            </defs>
+                                        </svg>
+                                    </span>
+                                </div>
+                                <ul role="list" class="space-y-5 my-7">
+                                    <li class="flex items-center">
+                                        <svg class="flex-shrink-0 w-4 h-4 text-orange-500" aria-hidden="true"
+                                            xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                                            <path
+                                                d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
+                                        </svg>
+                                        <span
+                                            class="text-base font-normal leading-tight text-gray-500 dark:text-gray-400 ms-3">2
+                                            team members</span>
+                                    </li>
+                                    <li class="flex">
+                                        <svg class="flex-shrink-0 w-4 h-4 text-orange-500 " aria-hidden="true"
+                                            xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                                            <path
+                                                d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
+                                        </svg>
+                                        <span
+                                            class="text-base font-normal leading-tight text-gray-500 dark:text-gray-400 ms-3">20GB
+                                            Cloud storage</span>
+                                    </li>
+                                    <li class="flex">
+                                        <svg class="flex-shrink-0 w-4 h-4 text-orange-500 " aria-hidden="true"
+                                            xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                                            <path
+                                                d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
+                                        </svg>
+                                        <span
+                                            class="text-base font-normal leading-tight text-gray-500 dark:text-gray-400 ms-3">Integration
+                                            help</span>
+                                    </li>
+                                </ul>
+                                <button type="button"
+                                    class="text-white bg-orange-500 hover:bg-orange-700 focus:ring-4 focus:outline-none focus:ring-orange-200 dark:focus:ring-orange-900 font-medium rounded-lg text-sm px-10 py-2.5 inline-flex justify-center w-full text-center">
+                                    Choose plan
+                                </button>
+                            </div>
+                        </div>
+                
+                        </div>
+                        <div class="hidden rounded-lg bg-card-orange" id="dashboard" role="tabpanel"
+                            aria-labelledby="profile-tab">
+                            <div class="w-full max-w-sm p-4 rounded-lg sm:p-8">
+                                <div class="flex items-baseline text-gray-900 dark:text-white">
+                                    <span class="text-5xl font-extrabold tracking-tight">$49</span>
+                                    <span class="ms-auto">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="70" height="72" viewBox="0 0 70 72"
+                                            fill="none">
+                                            <circle cx="50" cy="52" r="20" fill="#FB8A57" />
+                                            <g opacity="0.6">
+                                                <circle cx="2.28571" cy="2.28571" r="2.28571" fill="#FB8A57" />
+                                                <circle cx="11.4286" cy="2.28571" r="2.28571" fill="#FB8A57" />
+                                                <circle cx="20.5715" cy="2.28571" r="2.28571" fill="#FB8A57" />
+                                                <circle cx="29.7144" cy="2.28571" r="2.28571" fill="#FB8A57" />
+                                                <circle cx="2.28571" cy="11.429" r="2.28571" fill="#FB8A57" />
+                                                <circle cx="11.4286" cy="11.429" r="2.28571" fill="#FB8A57" />
+                                                <circle cx="20.5715" cy="11.429" r="2.28571" fill="#FB8A57" />
+                                                <circle cx="29.7144" cy="11.429" r="2.28571" fill="#FB8A57" />
+                                                <circle cx="2.28571" cy="20.5709" r="2.28571" fill="#FB8A57" />
+                                                <circle cx="11.4286" cy="20.5709" r="2.28571" fill="#FB8A57" />
+                                                <circle cx="20.5715" cy="20.5709" r="2.28571" fill="#FB8A57" />
+                                                <circle cx="29.7144" cy="20.5709" r="2.28571" fill="#FB8A57" />
+                                                <circle cx="2.28571" cy="29.7142" r="2.28571" fill="#FB8A57" />
+                                                <circle cx="11.4286" cy="29.7142" r="2.28571" fill="#FB8A57" />
+                                                <circle cx="20.5715" cy="29.7142" r="2.28571" fill="#FB8A57" />
+                                                <circle cx="29.7144" cy="29.7142" r="2.28571" fill="#FB8A57" />
+                                            </g>
+                                            <g filter="url(#filter0_b_530_1605)">
+                                                <path
+                                                    d="M13.6667 36.9998V27.5065C13.6667 15.7198 22.0133 10.8931 32.2267 16.7865L40.4667 21.5331L48.7067 26.2798C58.92 32.1731 58.92 41.8265 48.7067 47.7198L40.4667 52.4665L32.2267 57.2131C22.0133 63.1065 13.6667 58.2798 13.6667 46.4931V36.9998Z"
+                                                    fill="url(#paint0_linear_530_1605)" />
+                                                <path
+                                                    d="M13.6667 36.9998V27.5065C13.6667 15.7198 22.0133 10.8931 32.2267 16.7865L40.4667 21.5331L48.7067 26.2798C58.92 32.1731 58.92 41.8265 48.7067 47.7198L40.4667 52.4665L32.2267 57.2131C22.0133 63.1065 13.6667 58.2798 13.6667 46.4931V36.9998Z"
+                                                    stroke="#292D32" stroke-width="3" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                            </g>
+                                            <defs>
+                                                <filter id="filter0_b_530_1605" x="2.16666" y="2.77124" width="65.7"
+                                                    height="68.4573" filterUnits="userSpaceOnUse"
+                                                    color-interpolation-filters="sRGB">
+                                                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                                                    <feGaussianBlur in="BackgroundImageFix" stdDeviation="5" />
+                                                    <feComposite in2="SourceAlpha" operator="in"
+                                                        result="effect1_backgroundBlur_530_1605" />
+                                                    <feBlend mode="normal" in="SourceGraphic"
+                                                        in2="effect1_backgroundBlur_530_1605" result="shape" />
+                                                </filter>
+                                                <linearGradient id="paint0_linear_530_1605" x1="71" y1="17.9998" x2="15.3235"
+                                                    y2="45.208" gradientUnits="userSpaceOnUse">
+                                                    <stop stop-color="#F5F5F5" />
+                                                    <stop offset="1" stop-color="#F5F5F5" stop-opacity="0" />
+                                                </linearGradient>
+                                            </defs>
+                                        </svg>
+                                    </span>
+                                </div>
+                                <ul role="list" class="space-y-5 my-7">
+                                    <li class="flex items-center">
+                                        <svg class="flex-shrink-0 w-4 h-4 text-orange-500" aria-hidden="true"
+                                            xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                                            <path
+                                                d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
+                                        </svg>
+                                        <span
+                                            class="text-base font-normal leading-tight text-gray-500 dark:text-gray-400 ms-3">2
+                                            team members</span>
+                                    </li>
+                                    <li class="flex">
+                                        <svg class="flex-shrink-0 w-4 h-4 text-orange-500 " aria-hidden="true"
+                                            xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                                            <path
+                                                d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
+                                        </svg>
+                                        <span
+                                            class="text-base font-normal leading-tight text-gray-500 dark:text-gray-400 ms-3">20GB
+                                            Cloud storage</span>
+                                    </li>
+                                    <li class="flex">
+                                        <svg class="flex-shrink-0 w-4 h-4 text-orange-500 " aria-hidden="true"
+                                            xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                                            <path
+                                                d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
+                                        </svg>
+                                        <span
+                                            class="text-base font-normal leading-tight text-gray-500 dark:text-gray-400 ms-3">Integration
+                                            help</span>
+                                    </li>
+                                </ul>
+                                <button type="button"
+                                    class="text-white bg-orange-500 hover:bg-orange-700 focus:ring-4 focus:outline-none focus:ring-orange-200 dark:focus:ring-orange-900 font-medium rounded-lg text-sm px-10 py-2.5 inline-flex justify-center w-full text-center">
+                                    Choose plan
+                                </button>
+                            </div>
+                
+                        </div>
+                        <div class="hidden rounded-lg bg-card-orange" id="settings" role="tabpanel"
+                            aria-labelledby="profile-tab">
+                            <div class="w-full max-w-sm p-4 rounded-lg sm:p-8">
+                                <div class="flex items-baseline text-gray-900 dark:text-white">
+                                    <span class="text-5xl font-extrabold tracking-tight">$49</span>
+                                    <span class="ms-auto">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="70" height="72" viewBox="0 0 70 72"
+                                            fill="none">
+                                            <circle cx="50" cy="52" r="20" fill="#FB8A57" />
+                                            <g opacity="0.6">
+                                                <circle cx="2.28571" cy="2.28571" r="2.28571" fill="#FB8A57" />
+                                                <circle cx="11.4286" cy="2.28571" r="2.28571" fill="#FB8A57" />
+                                                <circle cx="20.5715" cy="2.28571" r="2.28571" fill="#FB8A57" />
+                                                <circle cx="29.7144" cy="2.28571" r="2.28571" fill="#FB8A57" />
+                                                <circle cx="2.28571" cy="11.429" r="2.28571" fill="#FB8A57" />
+                                                <circle cx="11.4286" cy="11.429" r="2.28571" fill="#FB8A57" />
+                                                <circle cx="20.5715" cy="11.429" r="2.28571" fill="#FB8A57" />
+                                                <circle cx="29.7144" cy="11.429" r="2.28571" fill="#FB8A57" />
+                                                <circle cx="2.28571" cy="20.5709" r="2.28571" fill="#FB8A57" />
+                                                <circle cx="11.4286" cy="20.5709" r="2.28571" fill="#FB8A57" />
+                                                <circle cx="20.5715" cy="20.5709" r="2.28571" fill="#FB8A57" />
+                                                <circle cx="29.7144" cy="20.5709" r="2.28571" fill="#FB8A57" />
+                                                <circle cx="2.28571" cy="29.7142" r="2.28571" fill="#FB8A57" />
+                                                <circle cx="11.4286" cy="29.7142" r="2.28571" fill="#FB8A57" />
+                                                <circle cx="20.5715" cy="29.7142" r="2.28571" fill="#FB8A57" />
+                                                <circle cx="29.7144" cy="29.7142" r="2.28571" fill="#FB8A57" />
+                                            </g>
+                                            <g filter="url(#filter0_b_530_1605)">
+                                                <path
+                                                    d="M13.6667 36.9998V27.5065C13.6667 15.7198 22.0133 10.8931 32.2267 16.7865L40.4667 21.5331L48.7067 26.2798C58.92 32.1731 58.92 41.8265 48.7067 47.7198L40.4667 52.4665L32.2267 57.2131C22.0133 63.1065 13.6667 58.2798 13.6667 46.4931V36.9998Z"
+                                                    fill="url(#paint0_linear_530_1605)" />
+                                                <path
+                                                    d="M13.6667 36.9998V27.5065C13.6667 15.7198 22.0133 10.8931 32.2267 16.7865L40.4667 21.5331L48.7067 26.2798C58.92 32.1731 58.92 41.8265 48.7067 47.7198L40.4667 52.4665L32.2267 57.2131C22.0133 63.1065 13.6667 58.2798 13.6667 46.4931V36.9998Z"
+                                                    stroke="#292D32" stroke-width="3" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                            </g>
+                                            <defs>
+                                                <filter id="filter0_b_530_1605" x="2.16666" y="2.77124" width="65.7"
+                                                    height="68.4573" filterUnits="userSpaceOnUse"
+                                                    color-interpolation-filters="sRGB">
+                                                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                                                    <feGaussianBlur in="BackgroundImageFix" stdDeviation="5" />
+                                                    <feComposite in2="SourceAlpha" operator="in"
+                                                        result="effect1_backgroundBlur_530_1605" />
+                                                    <feBlend mode="normal" in="SourceGraphic"
+                                                        in2="effect1_backgroundBlur_530_1605" result="shape" />
+                                                </filter>
+                                                <linearGradient id="paint0_linear_530_1605" x1="71" y1="17.9998" x2="15.3235"
+                                                    y2="45.208" gradientUnits="userSpaceOnUse">
+                                                    <stop stop-color="#F5F5F5" />
+                                                    <stop offset="1" stop-color="#F5F5F5" stop-opacity="0" />
+                                                </linearGradient>
+                                            </defs>
+                                        </svg>
+                                    </span>
+                                </div>
+                                <ul role="list" class="space-y-5 my-7">
+                                    <li class="flex items-center">
+                                        <svg class="flex-shrink-0 w-4 h-4 text-orange-500" aria-hidden="true"
+                                            xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                                            <path
+                                                d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
+                                        </svg>
+                                        <span
+                                            class="text-base font-normal leading-tight text-gray-500 dark:text-gray-400 ms-3">2
+                                            team members</span>
+                                    </li>
+                                    <li class="flex">
+                                        <svg class="flex-shrink-0 w-4 h-4 text-orange-500 " aria-hidden="true"
+                                            xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                                            <path
+                                                d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
+                                        </svg>
+                                        <span
+                                            class="text-base font-normal leading-tight text-gray-500 dark:text-gray-400 ms-3">20GB
+                                            Cloud storage</span>
+                                    </li>
+                                    <li class="flex">
+                                        <svg class="flex-shrink-0 w-4 h-4 text-orange-500 " aria-hidden="true"
+                                            xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                                            <path
+                                                d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
+                                        </svg>
+                                        <span
+                                            class="text-base font-normal leading-tight text-gray-500 dark:text-gray-400 ms-3">Integration
+                                            help</span>
+                                    </li>
+                                </ul>
+                                <button type="button"
+                                    class="text-white bg-orange-500 hover:bg-orange-700 focus:ring-4 focus:outline-none focus:ring-orange-200 dark:focus:ring-orange-900 font-medium rounded-lg text-sm px-10 py-2.5 inline-flex justify-center w-full text-center">
+                                    Choose plan
+                                </button>
+                            </div>
+                
+                        </div>
+                        <div class="hidden rounded-lg bg-card-orange" id="contacts" role="tabpanel"
+                            aria-labelledby="profile-tab">
+                            <div class="w-full max-w-sm p-4 rounded-lg sm:p-8">
+                                <div class="flex items-baseline text-gray-900 dark:text-white">
+                                    <span class="text-5xl font-extrabold tracking-tight">$49</span>
+                                    <span class="ms-auto">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="70" height="72" viewBox="0 0 70 72"
+                                            fill="none">
+                                            <circle cx="50" cy="52" r="20" fill="#FB8A57" />
+                                            <g opacity="0.6">
+                                                <circle cx="2.28571" cy="2.28571" r="2.28571" fill="#FB8A57" />
+                                                <circle cx="11.4286" cy="2.28571" r="2.28571" fill="#FB8A57" />
+                                                <circle cx="20.5715" cy="2.28571" r="2.28571" fill="#FB8A57" />
+                                                <circle cx="29.7144" cy="2.28571" r="2.28571" fill="#FB8A57" />
+                                                <circle cx="2.28571" cy="11.429" r="2.28571" fill="#FB8A57" />
+                                                <circle cx="11.4286" cy="11.429" r="2.28571" fill="#FB8A57" />
+                                                <circle cx="20.5715" cy="11.429" r="2.28571" fill="#FB8A57" />
+                                                <circle cx="29.7144" cy="11.429" r="2.28571" fill="#FB8A57" />
+                                                <circle cx="2.28571" cy="20.5709" r="2.28571" fill="#FB8A57" />
+                                                <circle cx="11.4286" cy="20.5709" r="2.28571" fill="#FB8A57" />
+                                                <circle cx="20.5715" cy="20.5709" r="2.28571" fill="#FB8A57" />
+                                                <circle cx="29.7144" cy="20.5709" r="2.28571" fill="#FB8A57" />
+                                                <circle cx="2.28571" cy="29.7142" r="2.28571" fill="#FB8A57" />
+                                                <circle cx="11.4286" cy="29.7142" r="2.28571" fill="#FB8A57" />
+                                                <circle cx="20.5715" cy="29.7142" r="2.28571" fill="#FB8A57" />
+                                                <circle cx="29.7144" cy="29.7142" r="2.28571" fill="#FB8A57" />
+                                            </g>
+                                            <g filter="url(#filter0_b_530_1605)">
+                                                <path
+                                                    d="M13.6667 36.9998V27.5065C13.6667 15.7198 22.0133 10.8931 32.2267 16.7865L40.4667 21.5331L48.7067 26.2798C58.92 32.1731 58.92 41.8265 48.7067 47.7198L40.4667 52.4665L32.2267 57.2131C22.0133 63.1065 13.6667 58.2798 13.6667 46.4931V36.9998Z"
+                                                    fill="url(#paint0_linear_530_1605)" />
+                                                <path
+                                                    d="M13.6667 36.9998V27.5065C13.6667 15.7198 22.0133 10.8931 32.2267 16.7865L40.4667 21.5331L48.7067 26.2798C58.92 32.1731 58.92 41.8265 48.7067 47.7198L40.4667 52.4665L32.2267 57.2131C22.0133 63.1065 13.6667 58.2798 13.6667 46.4931V36.9998Z"
+                                                    stroke="#292D32" stroke-width="3" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                            </g>
+                                            <defs>
+                                                <filter id="filter0_b_530_1605" x="2.16666" y="2.77124" width="65.7"
+                                                    height="68.4573" filterUnits="userSpaceOnUse"
+                                                    color-interpolation-filters="sRGB">
+                                                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                                                    <feGaussianBlur in="BackgroundImageFix" stdDeviation="5" />
+                                                    <feComposite in2="SourceAlpha" operator="in"
+                                                        result="effect1_backgroundBlur_530_1605" />
+                                                    <feBlend mode="normal" in="SourceGraphic"
+                                                        in2="effect1_backgroundBlur_530_1605" result="shape" />
+                                                </filter>
+                                                <linearGradient id="paint0_linear_530_1605" x1="71" y1="17.9998" x2="15.3235"
+                                                    y2="45.208" gradientUnits="userSpaceOnUse">
+                                                    <stop stop-color="#F5F5F5" />
+                                                    <stop offset="1" stop-color="#F5F5F5" stop-opacity="0" />
+                                                </linearGradient>
+                                            </defs>
+                                        </svg>
+                                    </span>
+                                </div>
+                                <ul role="list" class="space-y-5 my-7">
+                                    <li class="flex items-center">
+                                        <svg class="flex-shrink-0 w-4 h-4 text-orange-500" aria-hidden="true"
+                                            xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                                            <path
+                                                d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
+                                        </svg>
+                                        <span
+                                            class="text-base font-normal leading-tight text-gray-500 dark:text-gray-400 ms-3">2
+                                            team members</span>
+                                    </li>
+                                    <li class="flex">
+                                        <svg class="flex-shrink-0 w-4 h-4 text-orange-500 " aria-hidden="true"
+                                            xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                                            <path
+                                                d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
+                                        </svg>
+                                        <span
+                                            class="text-base font-normal leading-tight text-gray-500 dark:text-gray-400 ms-3">20GB
+                                            Cloud storage</span>
+                                    </li>
+                                    <li class="flex">
+                                        <svg class="flex-shrink-0 w-4 h-4 text-orange-500 " aria-hidden="true"
+                                            xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                                            <path
+                                                d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
+                                        </svg>
+                                        <span
+                                            class="text-base font-normal leading-tight text-gray-500 dark:text-gray-400 ms-3">Integration
+                                            help</span>
+                                    </li>
+                                </ul>
+                                <button type="button"
+                                    class="text-white bg-orange-500 hover:bg-orange-700 focus:ring-4 focus:outline-none focus:ring-orange-200 dark:focus:ring-orange-900 font-medium rounded-lg text-sm px-10 py-2.5 inline-flex justify-center w-full text-center">
+                                    Choose plan
+                                </button>
+                            </div>
+                
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
     </section>
-    <!-- Navbar End-->
+    <!-- Our Services Section End -->
 
     <!-- Features Section Start -->
-    <section id="feature-section" class="container flex justify-center mx-auto section-gap">
+    <section id="feature-section" class="container flex justify-center mx-auto">
         <div class="p-5 py-10 mb-10 bg-[url('/img/upper-right-red-bg.png')] bg-no-repeat bg-contain">
             <h1 data-aos="fade-right" data-aos-once="true"
                 class="text-3xl lg:text-5xl font-bold leading-tight text-slate text-center mb-12 lg:mb-16">
                 Here’s how it works!
             </h1>
-
             <img src="img/how-it-works.png" alt="how-it-works">
         </div>
     </section>
@@ -196,7 +994,7 @@
 
     <!-- Tools Promotion Section Start -->
     <section id="tools-promotion"
-        class="p-6 py-10 md:py-32 bg-gray-50 w-full bg-[url('/img/center-left-red-bg.png')] bg-no-repeat bg-contain section-gap">
+        class="p-6 py-10 md:py-32 mb-16 md:mb-48 bg-gray-50 w-full bg-[url('/img/center-left-red-bg.png')] bg-no-repeat bg-contain">
         <div>
             <h1 data-aos="fade-right" data-aos-once="true"
                 class="text-3xl lg:text-5xl font-bold leading-tight text-slate text-center md:mb-6">
@@ -534,8 +1332,8 @@
     <!-- Tools Promotion Section End -->
 
     <!-- Customer Review Section Start-->
-    <section id="customers-review" class="bg-[url('/img/review-bg.png')] bg-no-repeat bg-contain section-gap">
-        <div id="animation-carousel" class="relative w-full px-6 text-center" data-carousel="static">
+    <section id="customers-review" class="bg-[url('/img/review-bg.png')] bg-no-repeat bg-contain">
+        <div id="animation-carousel" class="relative w-full my-16 md:mb-32 px-6 text-center" data-carousel="static">
             <h1 data-aos="fade-right" data-aos-once="true"
                 class="text-3xl lg:text-5xl font-bold leading-tight text-slate text-center">
                 What customers say about TubeForces?
@@ -733,8 +1531,8 @@
 
 
     <!-- Free Boost Section Start-->
-    <section id="free-boost" class="section-gap">
-        <div class="bg-gradient-to-r from-[#02FED1] to-[#0089EC] p-6 py-32 bg-gray-50 w-full">
+    <section id="free-boost">
+        <div class="bg-gradient-to-r from-[#02FED1] to-[#0089EC] p-6 py-32 mb-10 bg-gray-50 w-full">
             <div class="flex flex-col-reverse md:flex-row md:space-x-10 items-center container max-w-screen-xl mx-auto">
                 <div data-aos="fade-right" class="md:w-7/12 aos-init aos-animate floating relative"><img
                         src="img/mobile-bg.png" class="h-auto w-full md:w-9/12">
@@ -797,23 +1595,20 @@
     <!-- Free Boost Section End-->
 
     <!-- FAQ Section Start-->
-    <section id="faq" class="section-gap">
+    <section id="faq">
         <div
-            class="container mx-auto px-6 xl:px-24 bg-[url('/img/red-green-middle-bg.png')] bg-no-repeat bg-contain">
+            class="container mx-auto px-6 xl:px-24 md:py-32 bg-[url('/img/red-green-middle-bg.png')] bg-no-repeat bg-contain">
             <div data-aos="zoom-in-up" class="my-14 flex flex-col lg:flex-row lg:space-x-20">
                 <div class="lg:w-6/12">
                     <div class="text-center md:text-start relative">
                         <div class="relative">
                             <h1 data-aos="fade-right" data-aos-once="true"
-                                class="text-3xl lg:text-5xl font-bold leading-tight text-slate text-center md:text-start mb-16 relative z-50">
+                                class="text-3xl lg:text-5xl font-bold leading-tight text-slate text-center md:text-start mb-16">
                                 Frequently<br />Asked Questions
                             </h1>
 
                             <img src="img/underline.png" data-aos="fade-up" data-aos-delay="300" data-aos-once="true"
-                            class="absolute top-[100%] right-14 md:left-24 lg:-right-0 z-0 w-64" alt="underline">
-
-                            <!-- <img src="img/underline.png" data-aos="fade-up" data-aos-delay="300" data-aos-once="true"
-                                class="absolute top-16 left-20 lg:top-32 lg:left-20 xl:top-24 xl:left-44 z-0 w-56" alt="underline"> -->
+                                class="absolute top-16 left-20 lg:top-24 lg:left-44 z-0 w-56" alt="underline">
                         </div>
 
                         <h2 data-aos="fade-right" data-aos-delay="300" data-aos-once="true"
@@ -939,7 +1734,7 @@
 
     <!-- Blog Section Start-->
 
-    <div class="bg-[url('img/blog-bg.svg')] bg-no-repeat container px-3 mx-auto section-gap">
+    <div class="bg-[url('img/blog-bg.svg')] bg-no-repeat container px-3 mx-auto">
         <h1 data-aos="fade-right" data-aos-once="true"
             class="text-3xl lg:text-5xl font-bold leading-tight text-slate text-center mb-16">
             Latest blogs & news
@@ -1065,7 +1860,7 @@
 
 
     <!-- Footer Section Start-->
-    <footer class="bg-gray-50 md:mt-40 md:p-20 md:pb-3 section-gap">
+    <footer class="bg-gray-50 mt-20 md:mt-40 md:p-20 md:pb-3">
         <div class="mx-auto w-full container p-4 py-6 lg:py-8">
             <div class="md:flex md:justify-between">
                 <div class="mb-6 md:mb-0">
