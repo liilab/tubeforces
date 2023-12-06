@@ -89,7 +89,7 @@ body {
 }
 
 .section-gap {
-    padding-top: 5rem;
+    padding-top: 5rem !important;
 
     /* @media (min-width: 1280px) {
         margin-bottom: 8rem;
