@@ -72,6 +72,11 @@ body {
     background: linear-gradient(30deg, rgba(251, 138, 87, 0.10) 0%, rgba(245, 245, 245, 0.22) 75.21%, #F5F5F5 100%);
 }
 
+.bg-card-blue {
+    border-radius: 8px;
+    background: linear-gradient(30deg, rgba(0, 124, 245, 0.06) 0%, rgba(245, 245, 245, 0.22) 75.21%, #F5F5F5 100%);
+}
+
 .img-fluid {
     max-width: 100%;
     height: auto;
